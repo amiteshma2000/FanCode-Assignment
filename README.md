@@ -1,5 +1,4 @@
 
-![Logo](https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcT1naYJPWoG7nzRH8s32xPtFRd4BfnV80gL2kwyTPeY&s)
 # Fancode SDET Assignment Solution 📒
 
 This is a small automation framework for ensuring that the users in Fancode city 🏙️ have completed more than 50% of their tasks📜 based on their ToDos.
@@ -15,7 +14,7 @@ Before using this framework, ensure that you have following installed on you mac
 
 1. Clone the repository on local machine
   ```console
-git clone https://github.com/Anic10x3/FancodeAssignmentTest.git
+git clone https://github.com/amiteshma2000/FanCode-Assignment.git
   ```
 2. Open the project in your preferred IDE
 
