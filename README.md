@@ -34,10 +34,13 @@ To run the automted test, follow these steps
 ### Test Configurations 🛠️
 src\test\resources\features :
   * folder contains feature files the describes a behavior of the feature
+    
 src\test\java\stepdefinitions :
   * contains stepdefs that have steps to performs the actions specified in the scenarios
+    
 src\test\java\utilities :
   * includes ExtentReportManager file that handles the configuration and creation of Extent Reports
+    
 src\test\java\runners :
   * contains TestRunner file that helps organizing and running the test cases efficiently
     
