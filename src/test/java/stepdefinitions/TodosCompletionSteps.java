@@ -19,6 +19,7 @@ public class TodosCompletionSteps {
 	public void user_has_the_todo_tasks() {
 //		API call get all users and to retrieve the entire JSON response as a list
 		Response resUser = Endpoints.getAllUsers();
+		Assert.assertEquals(resUser.getStatusCode(), 200);
 		this.allUsers = resUser.jsonPath().getList("$");
 	}
 
@@ -44,13 +45,13 @@ public class TodosCompletionSteps {
 				}
 			}
 		}
-
 	}
 
 	@Then("User Completed task percentage should be greater than {int}%")
 	public void user_completed_task_percentage_should_be_greater_than(Integer int1) {
 //		API call get all todos and to retrieve the entire JSON response as a list
 		Response resTodos = Endpoints.getAllTodos();
+		Assert.assertEquals(resTodos.getStatusCode(), 200);
 		List<Map<String, Object>> todos = resTodos.jsonPath().getList("$");
 //		Printing user completion percentages in a formatted way on Console
 		System.out.println("User Completion Percentages:");
@@ -76,7 +77,7 @@ public class TodosCompletionSteps {
 			double completionPercentage = ((double) completedTasks / totalTasks) * 100;
 			// Print formatted output with username and completionPercentage
 			System.out.printf("%-25s %.2f%%%n", user.get("name"), completionPercentage);
-			
+
 //			assertion to check if the completion percentage of todos is greater than 50%
 			Assert.assertTrue(completionPercentage > 50);
 		}
